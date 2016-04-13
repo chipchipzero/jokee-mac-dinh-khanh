@@ -18,9 +18,11 @@ class Api::V1Controller < ApiController
       end
 
       if joke.nil?
-        # save vote result
-        params[:votes].each do | vote |
-          Vote.create!(user: user, joke_id: vote[1][:id], vote: vote[1][:score], voted_on: today)
+        unless params[:votes].nil? || params[:votes].empty?
+          # save vote result
+          params[:votes].each do | vote |
+            Vote.create!(user: user, joke_id: vote[1][:id], vote: vote[1][:score], voted_on: today)
+          end
         end
         render_failed(2, "That's all the jokes for today! Come back another day!")
       else
