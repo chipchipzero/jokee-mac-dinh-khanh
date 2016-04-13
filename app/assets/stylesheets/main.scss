@@ -5,6 +5,9 @@
   .container-fluid {
     max-width: 1170px;
   }
+  .navbar-right {
+    margin-top: 20px;
+  }
   .company-name {
     font-size: 1.3em;
       .top-name {
@@ -49,8 +52,12 @@
     max-width: 970px;
     margin: 0 auto;
     .joke-content {
+      text-align: left;
       padding: 20px 0;
       border-bottom: 1px solid #ececec;
+      &.text-center {
+        text-align: center;
+      }
     }
     .vote-button {
       display: none;
