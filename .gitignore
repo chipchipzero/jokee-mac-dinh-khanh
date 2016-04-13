@@ -10,7 +10,6 @@
 /tmp
 .DS_Store
 /vendor/bundle
-/config/database.yml
 /.idea
 /public/system/*
 /public/temp/*
