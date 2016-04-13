@@ -7,14 +7,14 @@ class Api::V1Controller < ApiController
     today = Date.today
     if Vote.where(user: user, voted_on: today).empty?
       if params[:votes].nil? || params[:votes].empty?
-        joke = Joke.order('RAND()').first
+        joke = Joke.all.sample(1).first
       else
         # render_success params[:votes] and return
         ids = [];
         params[:votes].each do | vote |
           ids << vote[1][:id]
         end
-        joke = Joke.where.not(id: ids).first
+        joke = Joke.where.not(id: ids).sample(1).first
       end
 
       if joke.nil?
