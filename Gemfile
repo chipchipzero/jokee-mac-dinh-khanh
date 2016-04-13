@@ -41,6 +41,9 @@ gem 'simple-line-icons-rails'
 # enable js cookie
 gem 'js_cookie_rails'
 
+# rails admin
+gem 'rails_admin'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

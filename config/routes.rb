@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   namespace :api do
     scope :v1, module: 'v1', as: 'v1' do
       post 'api1'
