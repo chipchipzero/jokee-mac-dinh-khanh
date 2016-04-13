@@ -42,6 +42,7 @@ $(function(){
             $('.vote-button').show();
           } else if(res.status == 2) {
             $('.joke-content').addClass('text-center').text(res.message);
+            Cookies.remove('jokee_votes');
           } else {
             alert("Error.");
           }
